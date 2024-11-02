@@ -78,7 +78,7 @@ const ServiceDetailPage = () => {
       }
 
       const data = await response.json();
-      alert("Payment successful: " + JSON.stringify(data));
+      alert("Payment successful");
       setAmount("");
     } catch (err) {
       setError(err.message);
