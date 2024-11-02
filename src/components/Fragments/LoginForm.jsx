@@ -19,7 +19,6 @@ const LoginForm = () => {
       if (hoursElapsed >= 12) {
         sessionStorage.removeItem("jwtToken");
         sessionStorage.removeItem("tokenTimestamp");
-        console.log("Token Expired");
       }
     }
   }, []);
@@ -72,11 +71,8 @@ const LoginForm = () => {
         throw new Error(errorData.message || "Something Wrong");
       }
       const result = await response.json();
-      console.log("Login Success", result);
       if (result.data && result.data.token) {
         sessionStorage.setItem("jwtToken", result.data.token);
-        console.log("Token success");
-
         navigate("/home");
       }
     } catch (error) {

@@ -40,7 +40,6 @@ const RegisterForm = () => {
         throw new Error(errorData.message || "Something Wrong");
       }
       const result = await response.json();
-      console.log("regis success", result);
     } catch (error) {
       console.error("Registration Failed", error.message);
     }
