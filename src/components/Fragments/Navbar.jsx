@@ -5,7 +5,7 @@ import Banner from "../Elements/Banner";
 const Navbar = () => {
   return (
     <header className="flex justify-between items-center px-28 p-4 border-b">
-      <a href="/home" className="">
+      <a href="/" className="">
         <Banner classname="flex flex-row gap-3" />
       </a>
 
