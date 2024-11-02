@@ -1,5 +1,6 @@
-import Button from "../Elements/Button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "../Elements/Button";
 
 const RegisterForm = () => {
   const [registerData, setRegisterData] = useState({
@@ -8,6 +9,7 @@ const RegisterForm = () => {
     lastName: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setRegisterData({
@@ -37,11 +39,15 @@ const RegisterForm = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || "Something Wrong");
+        throw new Error(errorData.message || "Something went wrong");
       }
       const result = await response.json();
+      console.log("Registration successful", result);
+
+      // Navigate to root page after successful registration
+      navigate("/");
     } catch (error) {
-      console.error("Registration Failed", error.message);
+      console.error("Registration failed", error.message);
     }
   };
 
