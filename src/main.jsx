@@ -12,7 +12,7 @@ import TopupPage from "./pages/topup.jsx";
 import ProtectedRoute from "./components/Fragments/ProtectedRoute.jsx";
 import EditProfile from "./pages/editProfile.jsx";
 import TransactionHistoryPage from "./pages/transactionHistory.jsx";
-import ServiceDetailPage from "./components/Layouts/ServiceDetailPage.jsx";
+import ServiceDetailPage from "./pages/ServiceDetailPage.jsx";
 
 const router = createBrowserRouter([
   {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../Fragments/Navbar";
-import ProfileCard from "../Fragments/ProfileCard";
+import Navbar from "../components/Fragments/Navbar";
+import ProfileCard from "../components/Fragments/ProfileCard";
 
 const ServiceDetailPage = () => {
   const { service_code } = useParams();
